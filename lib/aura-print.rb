@@ -10,7 +10,9 @@ module AuraPrint
     def self.systemPrint(sku)
         require 'barby'
         require 'barby/barcode/code_128'
+        require 'barby/outputter/html_outputter'
+
         barcode = Barby::Code128B.new(sku)
-        return barcode
+        return barcode.to_html
     end
 end

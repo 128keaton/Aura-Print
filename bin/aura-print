@@ -7,4 +7,13 @@ rescue LoadError
   require 'aura-print'
 end
 
-AuraPrint.systemPrint("testing123455")
+if ARGV[0] == "system"
+  output = AuraPrint.systemPrint(ARGV[1])
+  puts "System printing does not work outside of a RoR environment"
+  puts output
+elsif ARGV[0] == "web"
+  output = AuraPrint.barcodeWeb(ARGV[1])
+  puts output
+else
+  puts "Error, either run as 'aura-print system $sku' or 'aura-print web $sku'"
+end
