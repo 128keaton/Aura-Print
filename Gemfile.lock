@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    AuraPrint (0.0.2)
+      barby (~> 0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    barby (0.6.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  AuraPrint!
+
+BUNDLED WITH
+   1.13.6

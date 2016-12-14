@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+begin
+  require 'aura-print'
+rescue LoadError
+  require 'rubygems'
+  require 'aura-print'
+end
+
+AuraPrint.systemPrint("testing123455")

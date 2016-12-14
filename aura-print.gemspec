@@ -1,21 +1,18 @@
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "aura-print/version"
+$LOAD_PATH.push File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name        = "AuraPrint"
-  s.version     = AuraPrint::VERSION
-  s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Keaton Burleson"]
-  s.email       = ["keaton.burleson@me.com"]
-  s.homepage    = ""
-  s.summary     = %q{A gem which manages printing.}
-  s.description = %q{A gem which manages printing between barcodeWeb and the user's machine.}
+    s.name = 'AuraPrint'
+    s.version     = '0.0.2'
+    s.platform    = Gem::Platform::RUBY
+    s.authors     = ['Keaton Burleson']
+    s.email       = ['keaton.burleson@me.com']
+    s.homepage    = 'http://128keaton.com'
+    s.summary     = 'A gem which manages printing.'
+    s.description = "A gem which manages printing between barcodeWeb and the user's machine."
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = ["lib"]
-
-  s.add_dependency "unirest"
+    s.files = ['lib/aura-print.rb']
+    s.require_paths = ['lib']
+    s.license = 'MIT'
+    s.add_dependency 'barby', '~> 0'
 end
