@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
     s.platform    = Gem::Platform::RUBY
     s.authors     = ['Keaton Burleson']
     s.email       = ['keaton.burleson@me.com']
-    s.homepage    = 'http://128keaton.com'
+    s.homepage    = 'https://github.com/128keaton/Aura-Print'
     s.summary     = 'A gem which manages printing.'
     s.description = "A gem which manages printing between barcodeWeb and the user's machine."
 
