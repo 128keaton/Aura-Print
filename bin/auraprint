@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
-
 begin
   require 'unirest'
-  require 'aura-print'
+  require 'AuraPrint'
 rescue LoadError
   require 'unirest'
   require 'rubygems'
