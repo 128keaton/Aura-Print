@@ -1,10 +1,16 @@
 #!/usr/bin/env ruby
-
+FILE_NAME = "aura-print.yml"
 begin
   require 'aura-print'
 rescue LoadError
   require 'rubygems'
   require 'aura-print'
+end
+
+if File.exists?(FILE_NAME)
+  AuraPrint.configure_with(File.join(Dir.pwd, FILE_NAME))
+else
+  raise("Cannot find configure file in pwd")
 end
 
 if ARGV[0] == "system"
