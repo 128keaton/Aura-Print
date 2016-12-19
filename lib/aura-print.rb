@@ -37,6 +37,14 @@ module AuraPrint
         'Success'
     end
 
+    def self.barcodeWeb(sku, printer)
+        require 'unirest'
+        Unirest.post('http://10.0.2.232/printer/aura.php',
+                     parameters: { sku: sku, printer: printer })
+
+        'Success'
+    end
+
     def self.systemPrint(sku)
         require 'barby'
         require 'barby/barcode/code_128'
