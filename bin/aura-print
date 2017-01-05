@@ -14,7 +14,7 @@ else
 end
 
 if ARGV[0] == "system"
-  output = AuraPrint.systemPrint(ARGV[1])
+  output = AuraPrint.systemPrintImage(ARGV[1])
   puts "System printing does not work outside of a RoR environment"
   puts output
 elsif ARGV[0] == "web" && ARGV[1] && ARGV[2]

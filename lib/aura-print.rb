@@ -43,11 +43,11 @@ module AuraPrint
       require 'rmagick'
       require 'chunky_png'
       require 'barby/outputter/rmagick_outputter'
+
       barcode = Barby::Code128B.new(sku)
-      img = barcode.to_image
-      img.format = 'png'
-      imgCode = Base64.encode64(@img.to_blob).gsub(/\n/, "")
-        "<img src='data:image/png;base64,#{imgCode}' />".html_safe
+      @img = barcode.to_image
+      @img.format = 'png'
+      @img.to_blob
     end
 
     def self.barcodeWeb(sku, printer)
